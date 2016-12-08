@@ -42,7 +42,7 @@ load(file="../data/regression.RData")
 tbbl=xtable(advertising_lm$coefficients)
 print(tbbl)       
 ```
-# Using the functions created in `code/functions/regression-functions.R` we get the following values for RSS, TSS, R^2, F-statistic, and RSE:
+Using the functions created in `code/functions/regression-functions.R` we get the following values for RSS, TSS, R^2, F-statistic, and RSE:
 
 ```{r}
 source("../code/functions/regression-functions.R")
