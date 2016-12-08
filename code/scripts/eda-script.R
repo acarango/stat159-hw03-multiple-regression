@@ -1,5 +1,6 @@
 #Read in data
 advertising <- read.csv("../../data/Advertising.csv")
+advertising <- advertising[,-c(1)]
 
 sink("../../data/eda-output.txt")
 paste("Summary of Quantitative Variables")
