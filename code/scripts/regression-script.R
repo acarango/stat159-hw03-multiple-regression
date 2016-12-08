@@ -8,7 +8,7 @@ sum_advertising_lm<-summary(advertising_lm)
 
 # save .RData
 
-save(sum_advertising_lm, 
+save(sum_advertising_lm, advertising_lm, 
      file = "../../data/regression.RData")
 
 # plots
