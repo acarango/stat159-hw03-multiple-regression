@@ -9,7 +9,7 @@ clean:
 	cd report; rm -f report.pdf  
 
 report: 
-	cd report; pandoc report.rmd  --latex-engine=xelatex -o report.pdf
+	cd report; Rscript -e 'rmarkdown::render("report.Rmd")'
 
 eda-output.txt: code/eda-script.R data/Advertising.csv 
 	cd code; Rscript eda-script.R
