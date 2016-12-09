@@ -13,7 +13,7 @@ advertising_lm<-lm(Sales~TV+Radio+Newspaper,
 
 # save .RData
 
-save(sum_advertising_lm, advertising_lm, 
+save(tv_lm, radio_lm, newspaper_lm, advertising_lm, 
      file = "../../data/regression.RData")
 
 # plots
