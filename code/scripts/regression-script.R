@@ -1,10 +1,15 @@
 # read in data 
 advertising <- read.csv("../../data/Advertising.csv")
 
+
+# 1 variable models
+tv_lm<-lm(Sales~TV, data=advertising)
+radio_lm<-lm(Sales~Radio, data=advertising)
+newspaper_lm<-lm(Sales~Newspaper, data=advertising)
+
 # fit model
 advertising_lm<-lm(Sales~TV+Radio+Newspaper,
                    data=advertising)
-sum_advertising_lm<-summary(advertising_lm)
 
 # save .RData
 
