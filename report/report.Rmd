@@ -44,9 +44,9 @@ Performing simple least squares regression seperately for each of the three expl
 
 ```{r, echo=FALSE} 
 load(file="../data/regression.RData")
-print(as.table(newspaper_lm))
-print(as.table(radio_lm))
-print(as.table(tv_lm))
+print(as.table(newspaper_lm$coefficients))
+print(as.table(radio_lm$coefficients))
+print(as.table(tv_lm$coefficients))
 ```
 
 Performing multiple ordinary least squares with all three explanatory variables at once as described in the methodology section provides us with the following coefficients:
