@@ -1,4 +1,4 @@
-.PHONY: all data clean
+.PHONY: all data clean report
 
 all: report.pdf eda-output.txt regression.RData
 
@@ -8,7 +8,7 @@ data:
 clean:
 	cd report; rm -f report.pdf  
 
-report.pdf: report/report.rmd data/regression.RData images/normal-qq-plot.png images/scale-location-plot.png images/residuals-plot.png 
+report: 
 	cd report; pandoc report.rmd  --latex-engine=xelatex -o report.pdf
 
 eda-output.txt: code/eda-script.R data/Advertising.csv 
