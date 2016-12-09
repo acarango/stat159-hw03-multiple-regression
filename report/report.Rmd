@@ -43,22 +43,28 @@ $$\sum_{i=1}^n (y_i - \beta_0 - \beta_1x_1i - \beta_2x_2i - \beta_3x_3i)^2 $$
 Performing ordinary least squares as described in the methodology section provides us with the following coefficients:
 
 ```{r, echo=FALSE}
-suppressWarnings(library(tables))
+suppressWarnings(library(xtable))
 #read in data 
 load(file="../data/regression.RData")
-coef_tbbl<-as.tabular(advertising_lm$coefficients)
-print(coef_tbbl)       
+coef_tbbl<-xtable(advertising_lm$coefficients)
+latex_tbbl<-toLatex(coef_tbbl)
+print(latex_tbbl)       
 ```
+
+
 Using the functions created in `code/functions/regression-functions.R` we get the following values for RSS, TSS, R^2, F-statistic, and RSE:
 
-```{r}
+
+```{r, echo = FALSE}
 source("../code/functions/regression-functions.R")
 
 vec <- c(residual_sum_squares(advertising_lm), total_sum_squares (advertising_lm), r_squared(advertising_lm), f_statistic(advertising_lm), residual_std_error(advertising_lm))
 names(vec) <- c("RSS", "TSS", "R2", "F-stat", "RSE")
-coef_tbbl<-as.tabular(vec)
-print(coef_tbbl)       
+coef_tbbl<-xtable(vec)
+latex_tbbl<-toLatex(coef_tbbl)
+print(latex_tbbl)          
 ```
+
 
 Here are some useful diagnostic plots for this regression as well:
 
