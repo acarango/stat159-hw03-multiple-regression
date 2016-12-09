@@ -29,7 +29,7 @@ We have 4 beta coefficients, 3 of which determine the slope and one (beta0) whic
 
 In order to fit a line to this data we must minimize the squared error. In other words we must find a line that minimizes the squared error, error being the distance between actual and fitted values. We accomplish this by minimizing the expression below.
 
-$$\sum_{i=1}^n (y_i - \beta_0 - \beta_1x_1_i - \beta_2x_2_i - \beta_3x_3_i)^2 $$
+$$\sum_{i=1}^n (y_i - \beta_0 - \beta_1x_1i - \beta_2x_2i - \beta_3x_3i)^2 $$
 
 # Results
 
