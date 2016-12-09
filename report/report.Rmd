@@ -40,15 +40,28 @@ $$\sum_{i=1}^n (y_i - \beta_0 - \beta_1x_1i - \beta_2x_2i - \beta_3x_3i)^2 $$
 
 # Results
 
-Performing ordinary least squares as described in the methodology section provides us with the following coefficients:
+Performing simple least squares regression seperately for each of the three explanatory variables produces the following coefficient estimates:
+
+```{r, echo=FALSE} 
+load(file="../data/regression.RData")
+print(as.table(newspaper_lm))
+print(as.table(radio_lm))
+print(as.table(tv_lm))
+```
+
+Performing multiple ordinary least squares with all three explanatory variables at once as described in the methodology section provides us with the following coefficients:
 
 ```{r, echo=FALSE}
-#read in data 
-load(file="../data/regression.RData")
 coef_tbbl<-as.table(advertising_lm$coefficients)
 print(coef_tbbl)    
 ```
 
+Here is the correlation matrix:
+
+```{r, echo=FALSE}
+load("../data/correlation-matrix.RData")
+print(as.table(cor_mat))
+```
 
 Using the functions created in `code/functions/regression-functions.R` we get the following values for RSS, TSS, R^2, F-statistic, and RSE:
 
