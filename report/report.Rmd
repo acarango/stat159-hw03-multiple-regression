@@ -1,3 +1,10 @@
+---
+title: "HW03: Multiple Regression"
+author: "Austin Carango"
+date: "December 9, 2016"
+output: html_document
+---
+
 # Abstract
 
 The idea of this project is to perform multiple least squares regression on the Advertising data set. This dataset reports 200 observations of `Sales`, `TV`, `Radio`, and `Newspaper`. This data is freely available ass a CSV file at [http://www-bcf.usc.edu/~gareth/ISL/Advertising.csv](http://www-bcf.usc.edu/~gareth/ISL/Advertising.csv). The methods discused are based on Chapter 3: Linear Regression (from " _An Introduction to Statistical Learning_" by James et al), which is available at http://www-bcf.usc.edu/~gareth/ISL/ISLR%20First%20Printing.pdf.
