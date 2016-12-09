@@ -75,7 +75,7 @@ Here are some useful diagnostic plots for this regression as well:
 
 There are several conclusions to be made based off the above results:
 
-* Firstly, we see that the most positive coefficient is for `r names(max(advertising$coefficients))` and the most negative coefficient is `r names(min(advertising$coefficients))`. This basic info leads us to believe that advertising budget should be directed more towards `r names(max(advertising$coefficients))` and it should be taken away from `r names(min(advertising$coefficients))`. 
+* Firstly, we see that the most positive coefficient is for `r names(max(advertising_lm$coefficients))` and the most negative coefficient is `r names(min(advertising_lm$coefficients))`. This basic info leads us to believe that advertising budget should be directed more towards `r names(max(advertising_lm$coefficients))` and it should be taken away from `r names(min(advertising_lm$coefficients))`. 
 
 * Second, we see that the R squared value of this regression is relatively high. R squared takes values between 0 and 1. A value of 0 means the model explains none of the variation in the data, whereas a value of 1 means the model explains all of said variation. The value we get is `r vec[3]`, which means most of the variation in the data is explained by the model.
 
