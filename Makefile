@@ -9,7 +9,7 @@ clean:
 	cd report; rm -f report.html 
 
 tests:
-        cd code/tests; Rscript test-regression.R
+	cd code/tests; Rscript test-regression.R
 
 report: 
 	cd report; Rscript -e 'rmarkdown::render("report.Rmd")'
