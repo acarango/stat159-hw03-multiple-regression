@@ -141,9 +141,22 @@ $(document).ready(function () {
 </div>
 <div id="results" class="section level1">
 <h1>Results</h1>
-<p>Performing ordinary least squares as described in the methodology section provides us with the following coefficients:</p>
+<p>Performing simple least squares regression seperately for each of the three explanatory variables produces the following coefficient estimates:</p>
+<pre><code>## (Intercept)   Newspaper 
+##  12.3514071   0.0546931</code></pre>
+<pre><code>## (Intercept)       Radio 
+##   9.3116381   0.2024958</code></pre>
+<pre><code>## (Intercept)          TV 
+##  7.03259355  0.04753664</code></pre>
+<p>Performing multiple ordinary least squares with all three explanatory variables at once as described in the methodology section provides us with the following coefficients:</p>
 <pre><code>##  (Intercept)           TV        Radio    Newspaper 
 ##  2.938889369  0.045764645  0.188530017 -0.001037493</code></pre>
+<p>Here is the correlation matrix:</p>
+<pre><code>##                   TV      Radio  Newspaper      Sales
+## TV        1.00000000 0.05480866 0.05664787 0.78222442
+## Radio     0.05480866 1.00000000 0.35410375 0.57622257
+## Newspaper 0.05664787 0.35410375 1.00000000 0.22829903
+## Sales     0.78222442 0.57622257 0.22829903 1.00000000</code></pre>
 <p>Using the functions created in <code>code/functions/regression-functions.R</code> we get the following values for RSS, TSS, R^2, F-statistic, and RSE:</p>
 <pre><code>##          RSS          TSS           R2       F-stat          RSE 
 ##  556.8252629 5417.1487500    0.8972106  427.7030277    1.6855104</code></pre>
